@@ -1,0 +1,13 @@
+CARPETA PARA FOTOGRAFÍAS
+
+Aquí van las fotos reales del negocio. Úsalas SOLO si tienes autorización
+(propias, del cliente, o con licencia que permita su uso).
+
+Cómo añadir una foto:
+1. Guarda la imagen en esta carpeta (ejemplo: hero.jpg).
+2. En index.html busca el comentario "FOTO FUTURA".
+3. Reemplaza el contenido del marco (el <svg> y el <span>) por:
+   <img src="img/hero.jpg" alt="Descripción de la foto" width="800" height="1000">
+4. Escribe un "alt" que describa la imagen (es importante para accesibilidad).
+
+Consejo: usa imágenes de menos de 300 KB para que la página cargue rápido.
