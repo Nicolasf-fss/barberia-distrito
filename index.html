@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barbería Distrito · Sitio de demostración</title>
+  <meta name="description" content="Demostración de página web para una barbería: servicios, horarios, ubicación y cita por WhatsApp. Todos los datos son ficticios.">
+  <!-- noindex: evita que esta demo aparezca en buscadores como si fuera un negocio real. -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#14120f">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Scripts clásicos (sin módulos) para que funcione con doble clic. El orden importa. -->
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- AVISO DE DEMOSTRACIÓN: discreto, pero visible. Se elimina al entregar a un cliente real. -->
+  <p class="demo"><strong>Sitio de demostración</strong> · todos los datos son ficticios</p>
+
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="brand" href="#inicio" aria-label="Barbería Distrito, ir al inicio">
+        <svg viewBox="0 0 100 100" width="26" height="26" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" aria-hidden="true"><circle cx="28" cy="78" r="9"/><circle cx="72" cy="78" r="9"/><path d="M33 71 L68 12 M67 71 L32 12"/></svg>
+        <span>Barbería <em>Distrito</em></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+
+      <nav class="nav" id="menu" aria-label="Principal">
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#local">El local</a></li>
+          <li><a href="#horarios">Horarios</a></li>
+          <li><a href="#cita">Cita</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="titulo-hero">
+      <div class="wrap hero__grid">
+        <div>
+          <p class="eyebrow">Cortes · Barba · Afeitado</p>
+          <h1 id="titulo-hero">Barbería <em>Distrito</em></h1>
+          <p class="lead">Corte clásico, barba perfilada y afeitado con toalla caliente en un espacio tranquilo. Atención con cita y trato cercano.</p>
+          <p class="actions">
+            <a class="btn btn--primary" href="#contacto">Contactar</a>
+            <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
+          </p>
+        </div>
+
+        <div class="hero__art">
+          <!-- FOTO FUTURA: para usar una foto real, guarda la imagen en img/ y reemplaza TODO el contenido
+               de este div (svg y span) por:
+               <img src="img/hero.jpg" alt="Descripción de la foto" width="800" height="1000">
+               Usa solo fotografías con autorización. -->
+          <div class="photo-frame photo-frame--hero">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="28" cy="78" r="9"/><circle cx="72" cy="78" r="9"/><path d="M33 71 L68 12 M67 71 L32 12"/><circle cx="50" cy="42" r="2" fill="currentColor"/></svg>
+            <span class="photo-frame__label">Espacio para fotografía autorizada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section" id="servicios" style="--sec-bg: var(--bg-alt)" aria-labelledby="titulo-servicios">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Tablero de precios</p>
+          <h2 id="titulo-servicios">Servicios</h2>
+          <p class="badge">Precios de ejemplo</p>
+          <p class="muted">Los servicios y valores (en pesos colombianos) son ficticios y no corresponden a un negocio real.</p>
+        </div>
+
+        <ol class="board">
+          <li><span class="board__n" aria-hidden="true">01</span><div><h3>Corte clásico</h3><p>Tijera y máquina, con acabado a navaja.</p></div><span class="board__price">$25.000</span></li>
+          <li><span class="board__n" aria-hidden="true">02</span><div><h3>Corte + barba</h3><p>El combo completo en una sola cita.</p></div><span class="board__price">$40.000</span></li>
+          <li><span class="board__n" aria-hidden="true">03</span><div><h3>Arreglo de barba</h3><p>Perfilado y definición de contornos.</p></div><span class="board__price">$20.000</span></li>
+          <li><span class="board__n" aria-hidden="true">04</span><div><h3>Afeitado con toalla caliente</h3><p>Afeitado tradicional con navaja.</p></div><span class="board__price">$30.000</span></li>
+          <li><span class="board__n" aria-hidden="true">05</span><div><h3>Corte infantil</h3><p>Para menores de 12 años.</p></div><span class="board__price">$18.000</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- EL LOCAL: franja compacta de 3 marcos -->
+    <section class="section section--compact" id="local" aria-labelledby="titulo-local">
+      <div class="wrap">
+        <div class="local-head">
+          <h2 id="titulo-local">El local</h2>
+          <p class="muted">Aquí irán fotografías autorizadas del espacio y del equipo.</p>
+        </div>
+        <!-- FOTOS FUTURAS: para cada marco, reemplaza el <svg> y el <span> que contiene por
+             <img src="img/local-1.jpg" alt="Descripción de la foto" width="600" height="400">
+             El contenedor .photo-frame se conserva y NO lleva aria-hidden, así el "alt" de la foto
+             sí lo leen los lectores de pantalla. Si una foto es solo decorativa, usa alt="".
+             Para quitar esta sección, borra este bloque y el enlace "El local" del menú. -->
+        <div class="strip">
+          <div class="photo-frame">
+            <svg aria-hidden="true" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><rect x="14" y="38" width="72" height="24" rx="4"/><path d="M24 38v24M34 38v16M44 38v24M54 38v16M64 38v24M74 38v16"/></svg>
+            <span class="photo-frame__label">Foto 1</span>
+          </div>
+          <div class="photo-frame">
+            <svg aria-hidden="true" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 62h50l10-14H30z"/><path d="M30 48l-6-10M70 62v-10"/></svg>
+            <span class="photo-frame__label">Foto 2</span>
+          </div>
+          <div class="photo-frame">
+            <svg aria-hidden="true" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="50" cy="50" r="26"/><path d="M50 32v18l12 8"/></svg>
+            <span class="photo-frame__label">Foto 3</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORARIOS Y UBICACIÓN -->
+    <section class="section" id="horarios" style="--sec-bg: var(--bg-alt)" aria-labelledby="titulo-horarios">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Visítanos</p>
+          <h2 id="titulo-horarios">Horarios y ubicación</h2>
+          <p class="muted">Horarios y dirección de demostración.</p>
+        </div>
+        <div>
+          <table class="hours">
+            <caption class="sr-only">Horarios de atención (ficticios)</caption>
+            <tbody>
+              <tr><th scope="row">Lunes a viernes</th><td>9:00 a. m. – 7:00 p. m.</td></tr>
+              <tr><th scope="row">Sábados</th><td>9:00 a. m. – 6:00 p. m.</td></tr>
+              <tr><th scope="row">Domingos y festivos</th><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+          <address class="place">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <span>Calle 00 # 00-00, Barrio Ejemplo, Ciudad Ejemplo<br><small>(dirección ficticia)</small></span>
+          </address>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLICITAR CITA -->
+    <section class="section cta" id="cita" aria-labelledby="titulo-cita">
+      <div class="wrap">
+        <h2 id="titulo-cita">Reserva tu turno</h2>
+        <p class="lead">Escríbenos por WhatsApp y te respondemos para acordar día y hora.</p>
+        <!-- data-whatsapp: main.js reemplaza href con el enlace generado desde js/config.js.
+             href="#contacto" es solo un respaldo si JavaScript no se ejecuta.
+             Si la configuración es inválida, main.js oculta este botón. -->
+        <p><a class="btn btn--primary btn--big" href="#contacto" data-whatsapp>Pedir cita por WhatsApp</a></p>
+        <!-- data-demo-note: main.js lo oculta cuando config.js indica whatsappIsDemo: false -->
+        <p class="muted small" data-demo-note>Número de demostración: no corresponde a una línea real de WhatsApp.</p>
+      </div>
+      <div class="pole" aria-hidden="true"></div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto" style="--sec-bg: var(--bg-alt)" aria-labelledby="titulo-contacto">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Hablemos</p>
+          <h2 id="titulo-contacto">Contacto</h2>
+          <p class="muted">Datos de demostración.</p>
+        </div>
+        <div>
+          <dl class="info">
+            <!-- WhatsApp: NO escribas aquí ningún número. main.js lo escribe desde js/config.js
+                 (el mismo valor que usa el enlace) y muestra esta fila solo si la configuración es válida. -->
+            <div data-whatsapp-row hidden><dt>WhatsApp</dt><dd><span data-whatsapp-number></span> <small data-demo-note>(número de demostración)</small></dd></div>
+            <div><dt>Correo</dt><dd><a href="mailto:contacto@example.com">contacto@example.com</a> <small>(ejemplo)</small></dd></div>
+            <div><dt>Dirección</dt><dd>Calle 00 # 00-00, Barrio Ejemplo <small>(ficticia)</small></dd></div>
+          </dl>
+          <p><a class="btn btn--primary" href="#contacto" data-whatsapp>Escribir por WhatsApp</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__grid">
+      <div>
+        <p class="brand-text">Barbería <em>Distrito</em></p>
+        <p class="muted small">Sitio de demostración con datos ficticios.</p>
+      </div>
+      <nav aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#horarios">Horarios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="wrap muted small copy">© 2026 Barbería Distrito · Demostración</p>
+  </footer>
+</body>
+</html>
