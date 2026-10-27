@@ -8,9 +8,10 @@
   <!-- noindex: evita que esta demo aparezca en buscadores como si fuera un negocio real. -->
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#14120f">
- <link rel="stylesheet" href="css/styles.css">
- <script src="js/config.js" defer></script>
- <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Scripts clásicos (sin módulos) para que funcione con doble clic. El orden importa. -->
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -125,11 +126,12 @@
           <p class="muted">Horarios y dirección de demostración.</p>
         </div>
         <div>
+          <!-- Horas: al editar, conserva los &nbsp; (espacios duros) dentro de "9:00&nbsp;a.&nbsp;m." para que la hora no se parta en dos líneas. -->
           <table class="hours">
             <caption class="sr-only">Horarios de atención (ficticios)</caption>
             <tbody>
-              <tr><th scope="row">Lunes a viernes</th><td>9:00 a. m. – 7:00 p. m.</td></tr>
-              <tr><th scope="row">Sábados</th><td>9:00 a. m. – 6:00 p. m.</td></tr>
+              <tr><th scope="row">Lunes a viernes</th><td>9:00&nbsp;a.&nbsp;m.&nbsp;– 7:00&nbsp;p.&nbsp;m.</td></tr>
+              <tr><th scope="row">Sábados</th><td>9:00&nbsp;a.&nbsp;m.&nbsp;– 6:00&nbsp;p.&nbsp;m.</td></tr>
               <tr><th scope="row">Domingos y festivos</th><td>Cerrado</td></tr>
             </tbody>
           </table>
